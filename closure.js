@@ -20,15 +20,14 @@ var add10 = makeAdder(10);
 console.log(add5(2)); // 7
 console.log(add10(2)); // 12
 
-//add5 i add10 są domknięciami. Dzielą ten sam kod zawarty w funkcji makeAdder, ale przechowują różne leksykalne środowisko. 
+//add5 i add10 są domknięciami. Dzielą ten sam kod zawarty w funkcji makeAdder, ale przechowują różne leksykalne środowisko.
 //W leksykalnym środowisku add5, x wynosi 5, natomiast w leksykalnym środowisku add10, x jest równe 10.
-
 
 // other example with html/css
 
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
