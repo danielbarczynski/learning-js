@@ -29,7 +29,7 @@ startConnection();
 // Sending messages
 
 formElement.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // stopping site refresh
 
   if (message) {
     connection.invoke("SendMessage", message);
