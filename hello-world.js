@@ -50,7 +50,7 @@ console.log(eq4);
 console.log(eq5);
 console.log(eq6);
 
-//Switch
+//* Switch
 const rateValue = (value) => {
     if(value < 0)
         return;
@@ -73,7 +73,7 @@ console.log(rateValue(20));
 console.log(rateValue(-20));
 rateValue(5);
 
-// Objects
+//* Objects
 const dog = {
     name: 'Miky',
     age: 10
@@ -84,3 +84,86 @@ dog.canBark = true;
 delete dog.age;
 
 console.log(dog);
+
+//* Complex structures
+var music = [
+    {
+        genre: 'pop',
+        popularity: 'high',
+        artists: [
+            {
+                name: 'Rihanna',
+                age:  50
+            },
+            {
+                name: 'Mr Kitty',
+                age: 30
+            }
+        ],
+        isInPoland: true  
+    },
+    {
+        genre: 'soundtrack',
+        popularity: 'low'
+    }
+]
+
+let complexData = music[0].artists[0].name;
+console.log(complexData);
+
+//* Rest Operator
+function addNums(...args) {
+    return args.reduce((a, b) => a + b, 0);
+}
+
+console.log(addNums(1, 2, 3, 4, 5, 6));
+
+//* Spread Operator
+const arr1 = [100, 200, 300];
+let arr2;
+let arr3;
+
+(function () {
+    arr2 = [...arr1]; // it's like cloning
+    arr3 = arr1; // not cloning
+    arr1[0] = 666;    
+})();
+
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+
+//* Return Object
+
+const returnObject = (name, age, gender) => ({ name, age, gender });
+
+console.log(returnObject('michael', 30, 'male'));
+
+//* Class and Getters & Setters
+class Cat {
+    // const age; // not working
+    constructor(name) {
+        this._name = name;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(updatedName) {
+        this._name = updatedName;
+    }
+}
+
+let cat = new Cat('Tino');
+
+console.log(cat.name);
+console.log(cat.name);
+
+cat.name = 'Negra';
+
+console.log(cat.name);
+
+const captilzeStringg = str => str.toUpperCase();
+
+export { captilzeStringg };
