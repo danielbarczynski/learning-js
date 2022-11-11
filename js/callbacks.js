@@ -3,11 +3,11 @@
 let isHappy = false;
 
 let myCallback = (callback, errorCallback) => {
-    if (isHappy) 
+    if (isHappy)
         callback('is happy')
     else
         errorCallback('is not happy')
-}   
+}
 
 myCallback((message) => {
     console.log(message);
@@ -21,7 +21,7 @@ const people = ['John', 'Marry', 'Jake', 'Paul', 'Andrew', 'Tate'];
 
 const myForEach = (arr, callback) => {
     for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];      
+        const element = arr[i];
         callback(element);
     }
 }
@@ -29,3 +29,13 @@ const myForEach = (arr, callback) => {
 myForEach(people, (theName) => {
     console.log(theName);
 })
+
+//----------------------------------
+
+let pokemon = (id, cb) => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .then(res => res.json())
+        .then(data => cb(data))
+}
+
+pokemon(5, (x) => console.log(x));
