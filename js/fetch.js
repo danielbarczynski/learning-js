@@ -1,16 +1,17 @@
 // const id = prompt('');
 // id = parseInt(id);
-const id = 5;
+const inp = document.querySelector('#inp');
 const div = document.querySelector('#fetch');
 const btnClick = document.querySelector('#btnClick');
-btnClick.addEventListener('click', getData)
 
+btnClick.addEventListener('click', getData)
+console.log(inp);
 // GET
 function getData() {
-    fetch(`https://reqres.in/api/users/${id}`)
+    fetch(`https://reqres.in/api/users/${inp.value}`)
         .then(response => response.json())
         .then(data => {
-            div.textContent = `${JSON.stringify(data)}`
+            div.innerHTML = `${JSON.stringify(data)}`
             console.log(data);
         });
 }
