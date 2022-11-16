@@ -28,16 +28,19 @@ function makeRequestSync() {
     const response = makeRequest('Google');
     const processedResponse = processRequest(response);
     console.log(processedResponse);
-}
+} // reutrns promise
 
 makeRequestSync();
 
 // Async
-
 async function makeRequestAsync() {
-    const response = await makeRequest('Google');
-    const processedResponse = await processRequest(response);
-    console.log(processedResponse);
-}
+    try {
+        const response = await makeRequest('Google'); // awaits for the function first
+        const processedResponse = await processRequest(response);
+        console.log(processedResponse);
+    } catch (error) {
+        console.log(error);
+    }
+} // returns result of a promise
 
 makeRequestAsync();
