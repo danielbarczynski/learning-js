@@ -19,7 +19,7 @@ const people = [{
 const filter = people.filter((x) => {
     return x.age > 30;
 });
-const filter2 = people.filter((x) => x.age > 40);
+const filter2 = people.filter(x => x.age > 40); // without () it also works
 
 console.log(filter);
 console.log(filter2);
