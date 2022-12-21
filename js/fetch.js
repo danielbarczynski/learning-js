@@ -7,8 +7,8 @@ const btnClick = document.querySelector('#btnClick');
 btnClick.addEventListener('click', getData)
 console.log(inp);
 // GET
-function getData() {
-    fetch(`https://reqres.in/api/users/${inp.value}`)
+function getData(id) {
+    fetch(`https://reqres.in/api/users/${id}`)
         .then(response => response.json())
         .then(data => {
             div.innerHTML = `${JSON.stringify(data)}`
@@ -23,6 +23,7 @@ fetch(`https://reqres.in/api/users`, {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+        id: 7,
         name: 'Daniel',
         age: 23,
         isDeveloper: true
@@ -31,3 +32,9 @@ fetch(`https://reqres.in/api/users`, {
     .then(response => response.json())
     .then(data => console.log(data));
 
+    
+fetch(`https://reqres.in/api/users/7`, {
+    method: 'DELETE',
+});
+
+getData(7);
