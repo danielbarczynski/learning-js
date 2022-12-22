@@ -1,17 +1,17 @@
 function init() {
-  var name = "Mozilla"; // name jest zmienną lokalną utworzoną przez funkcję init
-  function displayName() {
-    // displayName() jest wewnętrzną funkcją, domknięciem, ma dostep do name variable
-    alert(name); // używa zmiennej zdeklarowanej w funkcji nadrzędnej
-  }
-  displayName();
+    var name = "Mozilla"; // name jest zmienną lokalną utworzoną przez funkcję init
+    function displayName() {
+        // displayName() jest wewnętrzną funkcją, domknięciem, ma dostep do name variable
+        alert(name); // używa zmiennej zdeklarowanej w funkcji nadrzędnej
+    }
+    displayName();
 }
 init();
 
 function makeAdder(x) {
-  return function (y) {
-    return x + y;
-  };
+    return function (y) {
+        return x + y;
+    };
 }
 
 var add5 = makeAdder(5);
@@ -26,9 +26,9 @@ console.log(add10(2)); // 12
 // other example with html/css
 
 function makeSizer(size) {
-  return function () {
-    document.body.style.fontSize = size + "px";
-  };
+    return function () {
+        document.body.style.fontSize = size + "px";
+    };
 }
 
 var size12 = makeSizer(12);

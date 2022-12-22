@@ -2,7 +2,7 @@
 // in html need to be: <script type="module">
 
 export default class User {
-    constructor(name, age){
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
@@ -13,5 +13,8 @@ export function printName(user) {
 }
 
 export function printAge(user) {
-    console.log(`The user age is ${user.age}`); 
+    console.log(`The user age is ${user.age}`);
 }
+
+// or
+// export default User

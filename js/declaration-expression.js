@@ -6,17 +6,17 @@ console.log(add(4));
 // function declaration, you cannot pass to another function
 
 function add(number) {
-  return number;
+    return number;
 }
 
 // function expression
 
 const substract = function (number) {
-  return number;
+    return number;
 };
 
 const substract2 = function () {
-  console.log('expression');
+    console.log('expression');
 }
 
 substract2();
