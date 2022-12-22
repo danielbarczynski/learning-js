@@ -44,3 +44,17 @@ async function makeRequestAsync() {
 } // returns result of a promise
 
 makeRequestAsync();
+
+//* IMPORTANT
+fetch('https://reqres.in/api/users/')
+    .then(res => res.json())
+    .then(data => console.log(data)); // also working in the background asynchronously
+
+// this is exactly the same as:
+async function asyncFunc() {
+    const res = await fetch('https://reqres.in/api/users/');
+    const data = await res.json();
+    console.log(data);
+}
+
+asyncFunc();
