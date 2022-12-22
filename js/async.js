@@ -32,7 +32,7 @@ function makeRequestSync() {
 
 makeRequestSync();
 
-// Async
+//* Async
 async function makeRequestAsync() {
     try {
         const response = await makeRequest('Google'); // awaits for the function first

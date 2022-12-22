@@ -8,9 +8,10 @@ btnClick.addEventListener('click', getData)
 console.log(inp);
 // GET
 function getData(id) {
+    //* fetch is a promise, so we can use after it then, catch or async
     fetch(`https://reqres.in/api/users/${id}`)
-        .then(response => response.json())
-        .then(data => {
+        .then(response => response.json()) // deserializing response e.g http status: 200, body with our user 
+        .then(data => { // using deserialize object
             div.innerHTML = `${JSON.stringify(data)}`
             console.log(data);
         });
