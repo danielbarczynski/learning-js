@@ -8,7 +8,7 @@ function makeRequest(location) {
 }
 
 function processRequest(response) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         console.log('Processing response'); // called before then
         resolve(`Additional info: ${response}`) // called after then
     });

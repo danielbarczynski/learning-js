@@ -1,3 +1,6 @@
+//* In JavaScript, a promise is an object and we use the promise constructor to initialize a promise.
+//* Promises are the ideal choice for handling asynchronous operations in the simplest manner. 
+
 // let x = prompt(`Enter number:`);
 // let y = prompt(`Enter second number:`);
 

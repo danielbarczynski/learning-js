@@ -1,5 +1,6 @@
 // Callback is a function that you pass as parameter to another function
 // For example: setTimetout(() => (), 1000)
+// A callback function is passed as an argument to another function whereas Promise is something that is achieved or completed in the future.
 let isHappy = false;
 
 let myCallback = (callback, errorCallback) => {
