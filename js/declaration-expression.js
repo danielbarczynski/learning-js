@@ -14,7 +14,7 @@ function add(number) {
 //* (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined
 () => console.log('hello IIFE'); // won't print
 (() => console.log('hello IIFE'))(); // will print
-(function() {console.log('hello IIFE')})(); // will print
+(function addd() {console.log('hello IIFE declaration')})(); // will print
 // (() => substract(6))(); // cannot access before initialization
 (() => console.log(add(5)))();
 // function expression (can be use as an IIFE)
