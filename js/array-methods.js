@@ -28,8 +28,10 @@ console.log(filter2);
 // Map
 const map = people.map((x) => x.name); // shows only specific key values
 const map2 = people.map((x) => x.name + " " +x.age); // two values, not as an object
+const map3 = people.map(x => x.age * 2); 
 console.log(map);
 console.log(map2);
+console.log(map3);
 
 // Find
 //* returns an object
