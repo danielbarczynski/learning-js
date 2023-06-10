@@ -1,5 +1,19 @@
 'use strict';
 
+// async makes function return a promise
+async function fileLoaded() {
+    let loaded = true;
+    if (loaded)
+        return 'file loaded';
+        // return Promise.resolve('file loaded'); // without async keyword
+    else
+        throw 'file not loaded';
+    }
+    
+// without async keyword there is an error that "then is not a function"
+fileLoaded().then(value => console.log(value))
+            .catch(err => console.log(err));
+
 function makeRequest(location) {
     return new Promise((resolve, reject) => {
         console.log(`Making request to ${location}`);

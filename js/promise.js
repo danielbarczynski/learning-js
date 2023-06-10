@@ -1,5 +1,6 @@
 //* In JavaScript, a promise is an object and we use the promise constructor to initialize a promise.
 //* Promises are the ideal choice for handling asynchronous operations in the simplest manner. 
+//* Promises let asynchronous methods return values like they were synchronous 
 // let x = prompt(`Enter number:`);
 // let y = prompt(`Enter second number:`);
 // x = parseInt(x);
@@ -14,9 +15,8 @@ let promise = new Promise((resolve, reject) => {
     else
         reject('FAIL');
 })
-promise.then((message) => {
-    console.log(message);
-}).catch(message => console.log(message)); // doesn't have to be in ()
+promise.then(message => console.log(message))
+        .catch(message => console.log(message)); // doesn't have to be in ()
 
 let isHappy = true;
 let myPromise = (myMood) => {
